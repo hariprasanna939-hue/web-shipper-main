@@ -1,0 +1,62 @@
+export type Truck = {
+  id: string;
+  number: string;
+  capacity: string;
+  driver: string;
+  driverPhone: string;
+  location: string;
+  rating: number;
+  eta: string;
+  price: number;
+};
+
+export type Warehouse = {
+  id: string;
+  name: string;
+  location: string;
+  dock: string;
+  distance: string;
+  capacityFree: string;
+};
+
+export type Shipment = {
+  id: string;
+  cargo: string;
+  weight: string;
+  pickup: string;
+  destination: string;
+  status: "in_transit" | "delivered" | "cancelled" | "awaiting";
+  date: string;
+  truck?: string;
+  driver?: string;
+  price: number;
+};
+
+export const MOCK_TRUCKS: Truck[] = [
+  { id: "t1", number: "TN-09-AC-4521", capacity: "25T Flatbed", driver: "Ramesh Kumar", driverPhone: "+91 98400 12345", location: "Chennai Port", rating: 4.9, eta: "45 min", price: 18500 },
+  { id: "t2", number: "TN-22-BX-1187", capacity: "20T Container", driver: "Suresh M.", driverPhone: "+91 98400 98765", location: "Ennore", rating: 4.7, eta: "1h 10m", price: 17200 },
+  { id: "t3", number: "KA-05-MN-9032", capacity: "30T Flatbed", driver: "Arjun Reddy", driverPhone: "+91 99000 22334", location: "Sriperumbudur", rating: 4.8, eta: "1h 30m", price: 21000 },
+];
+
+export const MOCK_WAREHOUSES: Warehouse[] = [
+  { id: "w1", name: "Hosur Logistics Hub", location: "Hosur, TN", dock: "Dock 7", distance: "318 km", capacityFree: "1,200 sqft" },
+  { id: "w2", name: "Krishnagiri DC", location: "Krishnagiri, TN", dock: "Dock 3", distance: "295 km", capacityFree: "850 sqft" },
+];
+
+export const MOCK_SHIPMENTS: Shipment[] = [
+  { id: "RS-48201", cargo: "Steel Coil", weight: "20T", pickup: "Chennai Rail Yard", destination: "Hosur Warehouse", status: "in_transit", date: "Today, 14:20", truck: "TN-09-AC-4521", driver: "Ramesh Kumar", price: 18500 },
+  { id: "RS-48177", cargo: "Cement Bags", weight: "15T", pickup: "Ennore Port", destination: "Bengaluru DC", status: "delivered", date: "Yesterday", truck: "KA-05-MN-9032", driver: "Arjun Reddy", price: 16200 },
+  { id: "RS-48140", cargo: "Auto Parts", weight: "8T", pickup: "Sriperumbudur", destination: "Coimbatore", status: "delivered", date: "Dec 09", truck: "TN-22-BX-1187", driver: "Suresh M.", price: 12400 },
+  { id: "RS-48088", cargo: "Textile Rolls", weight: "12T", pickup: "Tirupur", destination: "Chennai Port", status: "cancelled", date: "Dec 07", price: 9800 },
+];
+
+export const TIMELINE_STEPS = [
+  "Booking Confirmed",
+  "Truck Assigned",
+  "Driver Accepted",
+  "Reached Pickup",
+  "Cargo Loaded",
+  "In Transit",
+  "Arrived Warehouse",
+  "Delivered",
+];
