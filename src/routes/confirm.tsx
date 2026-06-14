@@ -42,56 +42,48 @@ function ConfirmPage() {
   }, []);
 
   const timeline = [
-    {
-      icon: Truck,
-      text: "Truck TN-09-AC-4521 reserved",
-    },
-    {
-      icon: Warehouse,
-      text: "Dock 7 at Hosur reserved",
-    },
-    ...notifs.map((text) => ({
-      icon: Bell,
-      text,
-    })),
+    { icon: Truck, text: "Truck TN-09-AC-4521 reserved" },
+    { icon: Warehouse, text: "Dock 7 at Hosur reserved" },
+    ...notifs.map((text) => ({ icon: Bell, text })),
   ];
 
   return (
     <AppShell>
-      <main className="min-h-[calc(100vh-4rem)] bg-[#f5f5f7] px-4 py-6 text-[#1d1d1f] lg:px-6">
-        <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-[1fr_360px] lg:items-start">
-          <section className="overflow-hidden rounded-[34px] border border-white/80 bg-white/75 shadow-[0_24px_80px_rgba(0,0,0,0.10)] backdrop-blur-2xl">
-            <div className="px-6 py-8 text-center sm:px-10 sm:py-12">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-[28px] bg-[#34c759] text-white shadow-lg shadow-green-500/20">
-                <CheckCircle2 className="h-10 w-10" strokeWidth={2.5} />
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-4 sm:gap-5 lg:grid-cols-[1fr_320px] xl:grid-cols-[1fr_360px] lg:items-start">
+          {/* Main card */}
+          <section className="overflow-hidden rounded-[28px] sm:rounded-[34px] border border-white/80 bg-white/75 shadow-[0_24px_80px_rgba(0,0,0,0.10)] backdrop-blur-2xl">
+            <div className="px-4 py-6 text-center sm:px-8 sm:py-10 lg:px-10 lg:py-12">
+              <div className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-[22px] sm:rounded-[28px] bg-[#34c759] text-white shadow-lg shadow-green-500/20">
+                <CheckCircle2 className="h-8 w-8 sm:h-10 sm:w-10" strokeWidth={2.5} />
               </div>
 
-              <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-[#86868b]">
+              <p className="mt-5 sm:mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-[#86868b]">
                 Booking complete
               </p>
 
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[#1d1d1f] sm:text-6xl">
+              <h1 className="mt-2 sm:mt-3 text-3xl font-semibold tracking-tight text-[#1d1d1f] sm:text-5xl lg:text-6xl">
                 Shipment confirmed.
               </h1>
 
-              <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[#6e6e73]">
+              <p className="mx-auto mt-3 sm:mt-4 max-w-xl text-sm leading-6 text-[#6e6e73] sm:text-base sm:leading-7">
                 Your vehicle, driver, and destination dock are assigned. The
                 shipment has entered the pickup queue.
               </p>
 
-              <div className="mx-auto mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
+              <div className="mx-auto mt-5 sm:mt-8 grid grid-cols-3 gap-2 sm:gap-3 max-w-2xl">
                 <StatusCard
-                  icon={<PackageCheck className="h-5 w-5" />}
+                  icon={<PackageCheck className="h-4 w-4 sm:h-5 sm:w-5" />}
                   label="Shipment ID"
                   value={shipmentId}
                 />
                 <StatusCard
-                  icon={<Clock className="h-5 w-5" />}
+                  icon={<Clock className="h-4 w-4 sm:h-5 sm:w-5" />}
                   label="Status"
                   value="Awaiting Pickup"
                 />
                 <StatusCard
-                  icon={<MapPin className="h-5 w-5" />}
+                  icon={<MapPin className="h-4 w-4 sm:h-5 sm:w-5" />}
                   label="Destination"
                   value="Hosur"
                 />
@@ -99,27 +91,27 @@ function ConfirmPage() {
 
               <Link
                 to="/track"
-                className="mt-9 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#007aff] px-6 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-[#006ee6]"
+                className="mt-6 sm:mt-9 inline-flex h-11 sm:h-12 items-center justify-center gap-2 rounded-full bg-[#007aff] px-5 sm:px-6 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-[#006ee6]"
               >
                 Track shipment
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
 
-            <div className="border-t border-black/5 bg-white/50 px-5 py-5 sm:px-8">
-              <div className="mb-4 flex items-center justify-between">
+            <div className="border-t border-black/5 bg-white/50 px-4 py-4 sm:px-8 sm:py-5">
+              <div className="mb-3 flex items-center justify-between gap-2">
                 <div>
-                  <h2 className="text-lg font-semibold tracking-tight">
+                  <h2 className="text-base font-semibold tracking-tight sm:text-lg">
                     Dispatch updates
                   </h2>
-                  <p className="text-sm text-[#86868b]">
+                  <p className="text-xs text-[#86868b] sm:text-sm">
                     Live actions completed for this shipment.
                   </p>
                 </div>
 
-                <div className="inline-flex items-center gap-2 rounded-full bg-[#fff7d6] px-3 py-1.5 text-xs font-semibold text-[#8a6400]">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[#fff7d6] px-3 py-1.5 text-xs font-semibold text-[#8a6400] shrink-0">
                   <span className="h-2 w-2 animate-pulse rounded-full bg-[#ffcc00]" />
-                  Pickup queue
+                  Queue
                 </div>
               </div>
 
@@ -135,12 +127,13 @@ function ConfirmPage() {
             </div>
           </section>
 
-          <aside className="rounded-[30px] border border-white/80 bg-white/75 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.10)] backdrop-blur-2xl">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1d1d1f] text-white">
-              <Truck className="h-5 w-5" />
+          {/* Sidebar — shows below on mobile */}
+          <aside className="rounded-[24px] sm:rounded-[30px] border border-white/80 bg-white/75 p-4 sm:p-5 shadow-[0_24px_80px_rgba(0,0,0,0.10)] backdrop-blur-2xl">
+            <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-[#1d1d1f] text-white">
+              <Truck className="h-4 w-4 sm:h-5 sm:w-5" />
             </div>
 
-            <h2 className="mt-5 text-2xl font-semibold tracking-tight">
+            <h2 className="mt-4 text-xl sm:text-2xl font-semibold tracking-tight">
               Next step
             </h2>
 
@@ -149,22 +142,22 @@ function ConfirmPage() {
               warehouse arrival, and delivery confirmation.
             </p>
 
-            <div className="mt-5 rounded-2xl bg-[#f5f5f7] p-4">
+            <div className="mt-4 rounded-2xl bg-[#f5f5f7] p-3 sm:p-4">
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#86868b]">
                 Pickup window
               </p>
-              <p className="mt-1 text-lg font-semibold">Today, 16:00</p>
+              <p className="mt-1 text-base sm:text-lg font-semibold">Today, 16:00</p>
             </div>
 
-            <div className="mt-3 rounded-2xl bg-[#f5f5f7] p-4">
+            <div className="mt-3 rounded-2xl bg-[#f5f5f7] p-3 sm:p-4">
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#86868b]">
                 Estimated delivery
               </p>
-              <p className="mt-1 text-lg font-semibold">Today, 22:30</p>
+              <p className="mt-1 text-base sm:text-lg font-semibold">Today, 22:30</p>
             </div>
           </aside>
         </div>
-      </main>
+      </div>
     </AppShell>
   );
 }
@@ -179,16 +172,16 @@ function StatusCard({
   value: string;
 }) {
   return (
-    <div className="rounded-[24px] border border-black/5 bg-[#f5f5f7] p-4 text-left">
-      <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-[#007aff] shadow-sm">
+    <div className="rounded-[18px] sm:rounded-[24px] border border-black/5 bg-[#f5f5f7] p-3 sm:p-4 text-left">
+      <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl sm:rounded-2xl bg-white text-[#007aff] shadow-sm">
         {icon}
       </div>
 
-      <p className="mt-4 text-xs font-medium uppercase tracking-[0.16em] text-[#86868b]">
+      <p className="mt-3 sm:mt-4 text-[10px] sm:text-xs font-medium uppercase tracking-[0.16em] text-[#86868b]">
         {label}
       </p>
 
-      <p className="mt-1 truncate text-base font-semibold text-[#1d1d1f]">
+      <p className="mt-0.5 sm:mt-1 truncate text-sm sm:text-base font-semibold text-[#1d1d1f]">
         {value}
       </p>
     </div>
@@ -203,12 +196,12 @@ function TimelineItem({
   text: string;
 }) {
   return (
-    <div className="flex items-center gap-3 rounded-[22px] border border-black/5 bg-[#f5f5f7] p-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-white text-[#34c759] shadow-sm">
-        <Icon className="h-4 w-4" />
+    <div className="flex items-center gap-2 sm:gap-3 rounded-[18px] sm:rounded-[22px] border border-black/5 bg-[#f5f5f7] p-2.5 sm:p-3">
+      <div className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-white text-[#34c759] shadow-sm">
+        <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
       </div>
 
-      <span className="min-w-0 flex-1 text-sm font-medium text-[#1d1d1f]">
+      <span className="min-w-0 flex-1 text-xs sm:text-sm font-medium text-[#1d1d1f]">
         {text}
       </span>
 
