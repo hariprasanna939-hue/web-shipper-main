@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Force Vercel preset so the SSR server entry is built for Vercel's Node.js runtime
+  // instead of the default Cloudflare Workers target. This fixes the 404 NOT_FOUND error
+  // on Vercel deployments.
+  nitro: { preset: "vercel" },
 });
