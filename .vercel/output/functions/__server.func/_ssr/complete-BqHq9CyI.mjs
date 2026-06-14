@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { D as Download, F as ArrowRight, M as Camera, O as Clock, a as Truck, i as User, k as CircleCheck, p as ReceiptText, r as Warehouse, s as Star, w as IndianRupee } from "../_libs/lucide-react.mjs";
+import { A as CircleCheck, I as ArrowRight, N as Camera, O as Download, T as IndianRupee, a as User, c as Star, i as Warehouse, k as Clock, m as ReceiptText, o as Truck } from "../_libs/lucide-react.mjs";
 import { t as AppShell } from "./AppShell-DrpdwfAQ.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/complete-BqHq9CyI.js
 var import_jsx_runtime = require_jsx_runtime();

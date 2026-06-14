@@ -789,5 +789,15 @@ var X = createLucideIcon("x", [["path", {
 	d: "m6 6 12 12",
 	key: "d8bk6v"
 }]]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Zap = createLucideIcon("zap", [["path", {
+	d: "M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z",
+	key: "1xq2db"
+}]]);
 //#endregion
-export { CircleAlert as A, MapPin as C, Download as D, Eye as E, ArrowRight as F, ArrowLeft as I, Camera as M, CalendarClock as N, Clock as O, Bell as P, Menu as S, House as T, PackageCheck as _, Truck as a, MessageSquare as b, Sparkles as c, Route as d, RefreshCw as f, Package as g, Paperclip as h, User as i, ChevronRight as j, CircleCheck as k, Shield as l, Phone as m, Weight as n, TramFront as o, ReceiptText as p, Warehouse as r, Star as s, X as t, Send as u, Navigation as v, IndianRupee as w, MessageSquareText as x, Mic as y };
+export { CircleCheck as A, Menu as C, Eye as D, House as E, Bell as F, ArrowRight as I, ArrowLeft as L, ChevronRight as M, Camera as N, Download as O, CalendarClock as P, MessageSquareText as S, IndianRupee as T, Package as _, User as a, Mic as b, Star as c, Send as d, Route as f, Paperclip as g, Phone as h, Warehouse as i, CircleAlert as j, Clock as k, Sparkles as l, ReceiptText as m, X as n, Truck as o, RefreshCw as p, Weight as r, TramFront as s, Zap as t, Shield as u, PackageCheck as v, MapPin as w, MessageSquare as x, Navigation as y };

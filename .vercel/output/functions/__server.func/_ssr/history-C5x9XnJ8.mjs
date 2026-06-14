@@ -1,6 +1,6 @@
 import { r as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { D as Download, E as Eye, f as RefreshCw, g as Package, w as IndianRupee } from "../_libs/lucide-react.mjs";
+import { D as Eye, O as Download, T as IndianRupee, _ as Package, p as RefreshCw } from "../_libs/lucide-react.mjs";
 import { t as AppShell } from "./AppShell-DrpdwfAQ.mjs";
 import { t as MOCK_SHIPMENTS } from "./railsync-data-Tml22SHZ.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/history-C5x9XnJ8.js

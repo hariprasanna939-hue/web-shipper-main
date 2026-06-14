@@ -1,7 +1,7 @@
 import { r as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as useNavigate } from "../_libs/@tanstack/react-router+[...].mjs";
-import { C as MapPin, I as ArrowLeft, O as Clock, a as Truck, c as Sparkles, i as User, j as ChevronRight, k as CircleCheck, l as Shield, m as Phone, r as Warehouse, s as Star, w as IndianRupee, x as MessageSquareText } from "../_libs/lucide-react.mjs";
+import { A as CircleCheck, L as ArrowLeft, M as ChevronRight, S as MessageSquareText, T as IndianRupee, a as User, c as Star, h as Phone, i as Warehouse, k as Clock, l as Sparkles, o as Truck, u as Shield, w as MapPin } from "../_libs/lucide-react.mjs";
 import { t as AppShell } from "./AppShell-DrpdwfAQ.mjs";
 import { n as MOCK_TRUCKS, r as MOCK_WAREHOUSES } from "./railsync-data-Tml22SHZ.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/book-CWhQTqAq.js
